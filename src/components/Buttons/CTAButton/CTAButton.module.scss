@@ -1,0 +1,15 @@
+.button{
+    color: var(--color-primary);
+    border: none;
+    background-color: var(--color-white);
+    font-family: inherit;
+    font-weight: 700;
+    padding: .7rem 2rem;
+    border-radius: 3rem;
+    transition: all .3s;
+    &:hover{
+        cursor: pointer;
+        color: var(--color-white);
+        background-color: var(--color-primary-light);
+    }
+}

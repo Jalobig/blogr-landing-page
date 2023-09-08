@@ -1,0 +1,23 @@
+.intro{
+    position: relative;
+    z-index: 1;
+    margin: 8rem auto 5rem;
+    text-align: center;
+    &__heading{
+        font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    &__text{
+        font-size: 1.3rem;
+        color: var(--color-white-transparent);
+        margin-bottom: 3.5rem;
+
+    }
+    &__row{
+        width: 18.75rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}

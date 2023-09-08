@@ -1,0 +1,37 @@
+.feature {
+    
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+  &__row {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    // max-width: 79.6875rem;
+    // margin-left: auto;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+      width: 32.8rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      
+      &:not(:last-child) {
+          width: 33rem;
+          margin-bottom: 3rem;
+        }
+    }
+    &__text,
+    &__heading{
+      margin-left:-10rem;
+
+  }
+  &__bg {
+    position: relative;
+    left: -18rem;
+    top: -1rem;
+  }
+}

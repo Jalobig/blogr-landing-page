@@ -1,0 +1,13 @@
+.header{
+    background-image: linear-gradient(to right, var(--gradient-primary-light), var(--gradient-primary));
+    position: relative;
+    overflow: hidden;
+    padding: 3.75rem;
+    color: var(--color-white);
+    border-bottom-left-radius: 5rem;
+    &__bg{
+        position: absolute;
+        top: -85rem;
+        right: -82rem;
+    }
+}

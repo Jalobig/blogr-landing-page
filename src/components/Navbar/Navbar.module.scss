@@ -1,0 +1,86 @@
+.navbar {
+  position: relative;
+  max-width: 69.375rem;
+  margin: auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  color: var(--color-white-transparent);
+  &__logo {
+    height: 2.3125rem;
+    margin-right: 2rem;
+  }
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__group,
+  &__nav {
+    list-style: none;
+    display: flex;
+    &-item {
+      margin-right: 2rem;
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: var(--color-white);
+        text-decoration: underline;
+      }
+    }
+  }
+  &__group{
+    align-items: center;
+    &--item{
+        margin-right: 2rem;
+        transition: all .3s;
+        &:hover {
+            cursor: pointer;
+            color: var(--color-white);
+            text-decoration: underline;
+          }
+    }
+  }
+  &__icon {
+    margin-left: 0.5rem;
+  }
+}
+.active{
+    transform: rotate(180deg);
+    &__text{
+        color: var(--color-white);
+        text-decoration: underline;
+    }
+}
+.dropdown{
+    position: absolute;
+    top: 3rem;
+    background-color: var(--color-white);
+    color: var(--color-heading);
+    border-radius: .3rem;
+    width: 11rem;
+    ul{
+        list-style: none;
+        padding-inline-start: 0;
+        padding: 1rem 2rem;
+        li{
+            margin-bottom: 1rem;
+            transition: all .3s;
+            &:hover{
+                font-weight: 700;                
+            }
+        }
+    }
+    &__product{
+        left: 6.5rem;
+    }
+    &__company{
+        
+        left: 13.5rem;
+    }
+    &__connect{
+        left: 21rem;
+        
+    }
+}

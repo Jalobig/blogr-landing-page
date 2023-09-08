@@ -1,0 +1,42 @@
+:root{
+  // Colors
+
+/// Primary
+
+--color-primary: hsl(356, 100%, 66%); // CTA text
+--color-primary-light: hsl(355, 100%, 74%); // CTA hover bg
+--color-heading: hsl(208, 49%, 24%); // Headings
+
+/// Neutral
+
+--color-white-transparent: hsla(0, 0%, 100%, 0.709); // White text
+--color-white: hsl(0, 0%, 100%); // White text
+--color-grey-light: hsl(240, 2%, 79%); // Footer text
+--color-grey: hsl(207, 13%, 34%); // Dark text
+--color-grey-dark: hsl(240, 10%, 16%); //footer bg
+
+/// Gradient
+
+//Background gradient --Intro/CTA mobile nav:
+
+--gradient-primary-light: hsl(13, 100%, 72%);
+--gradient-primary: hsl(353, 100%, 62%);
+
+//Background gradient --body:
+
+--gradient-blue-dark: hsl(237, 17%, 21%);
+--gradient-blue: hsl(237, 23%, 32%);
+
+//Font Family
+--alt-font:'Ubuntu', sans-serif;
+
+}
+*,*::after,*::before{
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+  
+}
