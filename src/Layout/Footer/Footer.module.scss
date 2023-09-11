@@ -1,18 +1,23 @@
 .footer{
-  // height: 360px; ///temporary *******
   background-color: var(--color-grey-dark);
   color: var(--color-grey-light);
   border-top-right-radius: 5rem;
-  padding: 4.375rem 18rem 1rem 10rem;
   &__row{
+    padding: 4.375rem 18rem 1rem 10rem;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width:868px) {
+     flex-direction: column; 
+     align-items: center;
+     padding: 4.6875rem;
+     text-align: center;
+    }
   }
   &__logo{
     height: 2.3125rem;
-  }
-  &__column{
-
+    @media only screen and (max-width:868px) {
+     margin-bottom: 4.6875rem; 
+    }
   }
   &__heading{
     color: var(--color-white);
@@ -21,6 +26,9 @@
   &__list{
     list-style: none;
     padding-inline-start: 0;
+    @media only screen and (max-width:868px) {
+     margin-bottom: 3rem; 
+    }
     &-item{
       color: var(--color-grey-light);
       margin-bottom: 1rem;
@@ -36,6 +44,10 @@
   font-size: 11px;
   text-align: center;
   margin-top: 2rem;
+  @media only screen and (max-width:868px) {
+    margin-top: 0;
+      
+  }
 }
 .attribution a {
   color: var(--color-primary-light);

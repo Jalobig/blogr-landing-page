@@ -7,9 +7,13 @@
     padding: .7rem 2rem;
     border-radius: 3rem;
     transition: all .3s;
+   
     &:hover{
         cursor: pointer;
         color: var(--color-white);
+        background-image: unset; 
         background-color: var(--color-primary-light);
+        
     }
+    
 }

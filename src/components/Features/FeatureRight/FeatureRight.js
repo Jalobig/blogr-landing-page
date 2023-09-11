@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./FeatureRight.module.scss";
 import ImgLaptopDesktop from "../../../images/illustration-laptop-desktop.svg";
+import ImgLaptopMobile from "../../../images/illustration-laptop-mobile.svg";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 const FeatureRight = () => {
+  const media = useMediaQuery("only screen and (max-width:1148px)");
+  const [isVisible, setVisible] = useState(false);
+
+  const domRef = React.useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.isIntersecting && setVisible(true));
+    });
+
+    observer.observe(domRef.current);
+
+    return () => observer.unobserve(domRef.current);
+  }, []);
   return (
     <div className={classes.feature}>
       <div className={classes.feature__row}>
         <img
-          src={ImgLaptopDesktop}
+          ref={domRef}
+          src={media ? ImgLaptopMobile : ImgLaptopDesktop}
           alt="Laptop Illustration"
-          className={classes.feature__bg}
+          className={`${classes.feature__img} ${
+            isVisible ? classes["is-visible"] : ""
+          }`}
         />
         <div className={classes.feature__column}>
           <h2 className={classes.feature__heading}>Free, open, simple</h2>

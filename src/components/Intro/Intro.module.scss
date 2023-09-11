@@ -1,23 +1,49 @@
+@keyframes fade-in-bottom {
+    0%{
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+  }
 .intro{
     position: relative;
     z-index: 1;
-    margin: 8rem auto 5rem;
+    margin: 9rem auto 7rem;
     text-align: center;
+   
     &__heading{
+        animation: fade-in-bottom .4s;
         font-size: 4rem;
         font-weight: 400;
         margin-bottom: 2rem;
+        @media only screen and (max-width:500px) {
+            font-size: 2.2rem;
+        }
     }
     &__text{
+        animation: fade-in-bottom .4s .3s backwards;
         font-size: 1.3rem;
         color: var(--color-white-transparent);
         margin-bottom: 3.5rem;
-
+        @media only screen and (max-width:500px) {
+            font-size: 1.2rem;
+            
+        }
     }
     &__row{
+            animation: fade-in-bottom .4s .4s backwards;
         width: 18.75rem;
         margin: auto;
         display: flex;
         justify-content: space-between;
+        @media only screen and (max-width:500px) {
+            width: 18rem;
+      
+        
+        }
     }
 }

@@ -1,37 +1,72 @@
 .feature {
-    
   &__heading {
     margin-bottom: 1.5rem;
+    @media only screen and (max-width: 500px) {
+      font-size: 1.7rem;
+      width: 90%;
+      margin: auto;
+    }
   }
   &__row {
-    display: flex;
-    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31.875rem, 1fr));
     align-items: center;
-    // max-width: 79.6875rem;
-    // margin-left: auto;
+    max-width: 90%;
+    margin: 0 0 0 auto;
+    @media only screen and (max-width: 1148px) {
+      grid-template-columns: unset;
+      max-width: 100%;
+    }
   }
   &__column {
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 1148px) {
+      justify-self: center;
+      text-align: center;
+    }
   }
   &__text {
-      width: 32.8rem;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      
-      &:not(:last-child) {
-          width: 33rem;
-          margin-bottom: 3rem;
-        }
-    }
-    &__text,
-    &__heading{
-      margin-left:-10rem;
+    width: 32.8rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    @media only screen and (max-width: 600px) {
+      width: 86%;
+      margin:1.5rem auto;
 
+    }
+    &:not(:last-child) {
+      width: 33rem;
+      margin-bottom: 3rem;
+      @media only screen and (max-width: 600px) {
+        width: 86%;
+      }
+    }
   }
-  &__bg {
+
+  &__img {
     position: relative;
-    left: -18rem;
+    left: -27rem;
     top: -1rem;
+    opacity: 0;
+  transform: translate(-50%, 0%);
+  visibility: hidden;
+  transition: opacity .5s ease-out, transform .5s ease-out;
+  will-change: opacity, visibility;
+    @media only screen and (max-width: 1148px) {
+      justify-self: center;
+      top: 0;
+      left: 0;
+      margin-bottom: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
+}
+.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  display: flex; 
 }

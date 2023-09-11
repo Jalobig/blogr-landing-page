@@ -1,4 +1,30 @@
+@keyframes animation-nav {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in-top {
+  0%{
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
 .navbar {
+  animation: fade-in-top .4s;
   position: relative;
   max-width: 69.375rem;
   margin: auto;
@@ -6,81 +32,152 @@
   display: flex;
   align-items: center;
   color: var(--color-white-transparent);
+  @media only screen and (max-width: 868px) {
+    justify-content: space-between;
+  }
   &__logo {
     height: 2.3125rem;
     margin-right: 2rem;
+  }
+  &__menu {
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: scaleY(1.2);
+    }
+  }
+  &__hr {
+    width: 90%;
+    border-top: 0.1px solid var(--color-grey-light);
+    margin-bottom: 2rem;
   }
   &__row {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 868px) {
+      animation: animation-nav .4s backwards;
+      position: absolute;
+      top: 5rem;
+      flex-direction: column;
+      background-color: var(--color-white);
+      color: var(--color-grey-dark);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
   }
   &__group,
   &__nav {
     list-style: none;
     display: flex;
+    @media only screen and (max-width: 868px) {
+      padding-inline-start: 0;
+      flex-direction: column;
+      text-align: center;
+    }
     &-item {
       margin-right: 2rem;
       transition: all 0.3s;
+      @media only screen and (max-width: 868px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
       &:hover {
         cursor: pointer;
         color: var(--color-white);
         text-decoration: underline;
+        @media only screen and (max-width: 868px) {
+          color: var(--color-grey-dark);
+        }
       }
     }
   }
-  &__group{
+  &__group {
     align-items: center;
-    &--item{
-        margin-right: 2rem;
-        transition: all .3s;
-        &:hover {
-            cursor: pointer;
-            color: var(--color-white);
-            text-decoration: underline;
-          }
+    &--item {
+      margin-right: 2rem;
+      transition: all 0.3s;
+      @media only screen and (max-width: 868px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--color-white);
+        text-decoration: underline;
+        @media only screen and (max-width: 868px) {
+          color: var(--color-grey-dark);
+        }
+      }
     }
   }
   &__icon {
     margin-left: 0.5rem;
   }
+  &__button {
+    @media only screen and (max-width: 868px) {
+      color: var(--color-white) !important;
+      background-image: linear-gradient(
+        to right,
+        var(--gradient-primary-light),
+        var(--gradient-primary)
+      );
+    }
+  }
 }
-.active{
-    transform: rotate(180deg);
-    &__text{
-        color: var(--color-white);
-        text-decoration: underline;
+.active {
+  transform: rotate(180deg);
+  &__text {
+    color: var(--color-white);
+    text-decoration: underline;
+    @media only screen and (max-width: 868px) {
+      color: var(--color-grey-dark);
     }
+  }
 }
-.dropdown{
-    position: absolute;
-    top: 3rem;
-    background-color: var(--color-white);
-    color: var(--color-heading);
-    border-radius: .3rem;
-    width: 11rem;
-    ul{
-        list-style: none;
-        padding-inline-start: 0;
-        padding: 1rem 2rem;
-        li{
-            margin-bottom: 1rem;
-            transition: all .3s;
-            &:hover{
-                font-weight: 700;                
-            }
-        }
+.dropdown {
+  animation: fade-in-top .3s;
+  position: absolute;
+  top: 3rem;
+  background-color: var(--color-white);
+  color: var(--color-heading);
+  border-radius: 0.3rem;
+  width: 11rem;
+  @media only screen and (max-width: 868px) {
+    animation: none;
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+
+    background-color: var(--color-bg-dropdown-mobile);
+  }
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    padding: 1rem 2rem;
+    li {
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      &:hover {
+        font-weight: 700;
+      }
     }
-    &__product{
-        left: 6.5rem;
+  }
+  &__product {
+    left: 8.5rem;
+  }
+  &__company {
+    left: 15.5rem;
+  }
+  &__connect {
+    left: 23rem;
+  }
+  &__product,
+  &__company,
+  &__connect {
+    @media only screen and (max-width: 868px) {
+      left: 0;
     }
-    &__company{
-        
-        left: 13.5rem;
-    }
-    &__connect{
-        left: 21rem;
-        
-    }
+  }
 }

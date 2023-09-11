@@ -7,10 +7,9 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  <!-- - [Links](#links) -->
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  <!-- - [Useful resources](#useful-resources) -->
 - [Author](#author)
 
 ## Overview
@@ -27,9 +26,9 @@ Users should be able to:
 ![Desktop design](desktop-design.jpg)
 ![Mobile design](mobile-design.jpg)
 
-<!-- ### Links
+### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Live Site URL: [Live site here](https://Jalobig.github.io/blogr-landing-page/)
 
 ## My process
 
@@ -39,11 +38,6 @@ Users should be able to:
 - Flexbox
 - Desktop-first workflow
 - [React](https://reactjs.org/) - JS library
-
-<!-- ### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
 
 ## Author
 

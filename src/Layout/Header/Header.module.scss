@@ -5,9 +5,17 @@
     padding: 3.75rem;
     color: var(--color-white);
     border-bottom-left-radius: 5rem;
+    @media only screen and (max-width:500px) {
+      padding: 3rem 1.3rem;
+    }
     &__bg{
         position: absolute;
         top: -85rem;
         right: -82rem;
+        @media only screen and (max-width:500px) {
+            top: -15rem;
+            right: -40rem;
+            
+        }
     }
 }
